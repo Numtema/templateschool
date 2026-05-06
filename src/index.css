@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-primary: #F3122C;
+  --color-brand-primary-hover: #D90F27;
+  --color-brand-primary-soft: #FFE8EC;
+  --color-brand-primary-surface: #FFF2F4;
+  
+  --color-brand-secondary: #4828C8;
+  --color-brand-secondary-hover: #3920A6;
+  --color-brand-secondary-soft: #EEE9FF;
+  
+  --color-brand-accent: #F7721C;
+  
+  --color-bg-page: #FAFAFA;
+  --color-bg-soft: #F6F7FB;
+  
+  --radius-xl: 20px;
+  --radius-xxl: 28px;
+  
+  --shadow-card: 0 12px 30px rgba(17, 24, 39, 0.07);
+  --shadow-card-hover: 0 18px 42px rgba(17, 24, 39, 0.11);
+  --shadow-primary-glow: 0 12px 28px rgba(243, 18, 44, 0.22);
+}
+
+@layer base {
+  body {
+    @apply bg-bg-page text-[#111827] font-sans antialiased;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-[1180px] mx-auto px-6;
+  }
+}
