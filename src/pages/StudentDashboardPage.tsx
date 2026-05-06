@@ -1,5 +1,5 @@
 import { MOCK_COURSES } from '../constants.ts';
-import { Button, Badge } from '../components/UI.tsx';
+import { Button, Badge, ProgressBar } from '../components/UI.tsx';
 import { Play, BookOpen, Trophy, Clock, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
@@ -66,20 +66,7 @@ export function StudentDashboardPage() {
                        </div>
                        
                        <div className="space-y-4">
-                          <div className="space-y-2">
-                             <div className="flex justify-between text-[10px] font-bold uppercase text-[#9CA3AF]">
-                                <span>Progression</span>
-                                <span className="text-brand-primary">{course.progress}%</span>
-                             </div>
-                             <div className="h-2 w-full bg-[#F3F4F6] rounded-full overflow-hidden">
-                                <motion.div 
-                                  initial={{ width: 0 }}
-                                  animate={{ width: `${course.progress}%` }}
-                                  transition={{ duration: 1, delay: 0.5 }}
-                                  className="h-full bg-brand-primary rounded-full" 
-                                />
-                             </div>
-                          </div>
+                          <ProgressBar progress={course.progress} showLabel />
                           <Link to={`/courses/${course.slug}/learn`}>
                             <Button size="sm" className="w-full sm:w-auto">Reprendre</Button>
                           </Link>

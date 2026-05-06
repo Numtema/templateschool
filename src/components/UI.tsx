@@ -62,3 +62,26 @@ export function Badge({ children, variant = 'info', className }: { children: Rea
     </span>
   );
 }
+
+export function ProgressBar({ progress, className, showLabel = false }: { progress: number, className?: string, showLabel?: boolean }) {
+  return (
+    <div className={cn("w-full", className)}>
+      {showLabel && (
+        <div className="flex justify-between items-center mb-2">
+          <span className="text-[10px] font-bold text-[#9CA3AF] uppercase tracking-widest">Progression</span>
+          <span className="text-xs font-bold text-brand-primary">{Math.round(progress)}%</span>
+        </div>
+      )}
+      <div className="h-2 w-full bg-[#F3F4F6] rounded-full overflow-hidden">
+        <motion.div 
+          initial={{ width: 0 }}
+          animate={{ width: `${progress}%` }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="h-full bg-brand-primary rounded-full relative"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/20" />
+        </motion.div>
+      </div>
+    </div>
+  );
+}
