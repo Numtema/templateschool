@@ -38,6 +38,8 @@ export function InstructorDashboardPage() {
     }))
   );
 
+  const [openMenuId, setOpenMenuId] = useState<string | number | null>(null);
+
   if (!isLoggedIn || user?.role !== 'instructor') {
     return <Navigate to="/dashboard" />;
   }
@@ -119,13 +121,13 @@ export function InstructorDashboardPage() {
         </div>
 
         {/* Courses Management */}
-        <div className="bg-white rounded-[40px] border border-[#E7E7E7] shadow-sm overflow-hidden">
+        <div className="bg-white rounded-[40px] border border-[#E7E7E7] shadow-sm">
            <div className="p-8 border-b border-[#F3F4F6] flex items-center justify-between">
               <h2 className="text-xl font-bold text-[#111827]">Vos Formations</h2>
               <button className="text-sm font-bold text-brand-primary hover:underline">Voir tout le catalogue</button>
            </div>
            
-           <div className="overflow-x-auto">
+           <div className="overflow-x-auto lg:overflow-visible">
               <table className="w-full text-left">
                  <thead className="bg-bg-soft/30">
                     <tr>
@@ -177,31 +179,56 @@ export function InstructorDashboardPage() {
                                   <Settings size={18} />
                                </button>
                                
-                               <div className="relative group/menu">
-                                  <button className="p-2 text-[#6B7280] hover:bg-bg-soft rounded-lg transition-all">
+                               <div className="relative">
+                                  <button 
+                                    onClick={() => setOpenMenuId(openMenuId === course.id ? null : course.id)}
+                                    className={`p-2 rounded-lg transition-all ${openMenuId === course.id ? 'bg-brand-primary text-white shadow-primary-glow' : 'text-[#6B7280] hover:bg-bg-soft'}`}
+                                  >
                                      <MoreVertical size={18} />
                                   </button>
-                                  <div className="absolute right-0 top-full mt-2 w-48 bg-white border border-[#E7E7E7] rounded-xl shadow-card opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all z-20 p-2 text-left">
-                                     <Link 
-                                       to={`/courses/${course.slug}`}
-                                       className="w-full flex items-center gap-3 p-3 hover:bg-bg-soft rounded-lg text-sm font-bold text-[#111827]"
-                                     >
-                                        <Play size={16} /> Aperçu public
-                                     </Link>
-                                     <button 
-                                       onClick={() => handleDuplicate(course)}
-                                       className="w-full flex items-center gap-3 p-3 hover:bg-bg-soft rounded-lg text-sm font-bold text-[#111827]"
-                                     >
-                                        <Plus size={16} /> Dupliquer
-                                     </button>
-                                     <div className="h-px bg-[#F3F4F6] my-2" />
-                                     <button 
-                                       onClick={() => handleDelete(course.id)}
-                                       className="w-full flex items-center gap-3 p-3 hover:bg-error-soft rounded-lg text-sm font-bold text-error"
-                                     >
-                                        <X size={16} /> Supprimer
-                                     </button>
-                                  </div>
+                                  
+                                  <AnimatePresence>
+                                    {openMenuId === course.id && (
+                                      <>
+                                        <div 
+                                          className="fixed inset-0 z-10" 
+                                          onClick={() => setOpenMenuId(null)}
+                                        />
+                                        <motion.div 
+                                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                          className="absolute right-0 top-full mt-2 w-48 bg-white border border-[#E7E7E7] rounded-2xl shadow-xl z-20 p-2 text-left"
+                                        >
+                                           <Link 
+                                             to={`/courses/${course.slug}`}
+                                             className="w-full flex items-center gap-3 p-3 hover:bg-bg-soft rounded-xl text-sm font-bold text-[#111827] transition-colors"
+                                           >
+                                              <Play size={16} /> Aperçu public
+                                           </Link>
+                                           <button 
+                                             onClick={() => {
+                                               handleDuplicate(course);
+                                               setOpenMenuId(null);
+                                             }}
+                                             className="w-full flex items-center gap-3 p-3 hover:bg-bg-soft rounded-xl text-sm font-bold text-[#111827] transition-colors"
+                                           >
+                                              <Plus size={16} /> Dupliquer
+                                           </button>
+                                           <div className="h-px bg-[#F3F4F6] my-2" />
+                                           <button 
+                                             onClick={() => {
+                                               handleDelete(course.id);
+                                               setOpenMenuId(null);
+                                             }}
+                                             className="w-full flex items-center gap-3 p-3 hover:bg-error-soft rounded-xl text-sm font-bold text-error transition-colors"
+                                           >
+                                              <X size={16} /> Supprimer
+                                           </button>
+                                        </motion.div>
+                                      </>
+                                    )}
+                                  </AnimatePresence>
                                </div>
                             </div>
                          </td>

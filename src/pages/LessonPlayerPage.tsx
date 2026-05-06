@@ -13,7 +13,22 @@ export function LessonPlayerPage() {
   if (!course) return <div>Cours non trouvé</div>;
 
   const modules = MOCK_MODULES[course.id] || [];
-  const activeLesson = modules[0].lessons[0]; // Example: first lesson
+  const activeLesson = modules[0]?.lessons[0]; 
+
+  if (!activeLesson) {
+    return (
+      <div className="h-screen flex flex-col items-center justify-center p-8 text-center">
+         <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-gray-400">
+            <Lock size={32} />
+         </div>
+         <h1 className="text-2xl font-bold text-[#111827] mb-2">Contenu non disponible</h1>
+         <p className="text-[#6B7280] mb-8">Le contenu de cette formation n'est pas encore accessible ou est en cours de mise en ligne.</p>
+         <Link to="/dashboard">
+            <Button>Retour au tableau de bord</Button>
+         </Link>
+      </div>
+    );
+  }
 
   return (
     <div className="h-screen flex flex-col bg-white overflow-hidden">

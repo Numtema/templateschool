@@ -71,5 +71,28 @@ export const MOCK_MODULES: Record<string, Module[]> = {
         { id: 'l4', slug: 'branding-visuel', courseId: '1', moduleId: 'm2', title: 'Le branding visuel efficace', durationSeconds: 1200, isFree: false, order: 2 }
       ]
     }
+  ],
+  '2': [
+    {
+      id: 'm3',
+      courseId: '2',
+      title: 'Démarrer avec WordPress',
+      order: 1,
+      lessons: [
+        { id: 'l5', slug: 'installation', courseId: '2', moduleId: 'm3', title: 'Installation locale de WP', durationSeconds: 600, isFree: true, order: 1 },
+        { id: 'l6', slug: 'panneau-administration', courseId: '2', moduleId: 'm3', title: 'Tour du propriétaire', durationSeconds: 800, isFree: false, order: 2 }
+      ]
+    }
+  ],
+  '3': [
+    {
+      id: 'm4',
+      courseId: '3',
+      title: 'Principes de base',
+      order: 1,
+      lessons: [
+        { id: 'l7', slug: 'lignes-et-mouvement', courseId: '3', moduleId: 'm4', title: 'Lignes et mouvement de base', durationSeconds: 450, isFree: true, order: 1 }
+      ]
+    }
   ]
 };
