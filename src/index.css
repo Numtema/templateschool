@@ -4,14 +4,14 @@
 @theme {
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
   
-  --color-brand-primary: #F3122C;
-  --color-brand-primary-hover: #D90F27;
-  --color-brand-primary-soft: #FFE8EC;
-  --color-brand-primary-surface: #FFF2F4;
+  --color-brand-primary: #1C3399; /* Royal Blue */
+  --color-brand-primary-hover: #15277A;
+  --color-brand-primary-soft: #EBEFFC;
+  --color-brand-primary-surface: #F5F7FD;
   
-  --color-brand-secondary: #4828C8;
-  --color-brand-secondary-hover: #3920A6;
-  --color-brand-secondary-soft: #EEE9FF;
+  --color-brand-secondary: #2C3E50;
+  --color-brand-secondary-hover: #1A252F;
+  --color-brand-secondary-soft: #E2E8F0;
   
   --color-brand-accent: #F7721C;
   
@@ -23,7 +23,7 @@
   
   --shadow-card: 0 12px 30px rgba(17, 24, 39, 0.07);
   --shadow-card-hover: 0 18px 42px rgba(17, 24, 39, 0.11);
-  --shadow-primary-glow: 0 12px 28px rgba(243, 18, 44, 0.22);
+  --shadow-primary-glow: 0 12px 28px rgba(74, 105, 189, 0.22);
 }
 
 @layer base {

@@ -29,7 +29,7 @@ export const MOCK_COURSES: Course[] = [
     durationSeconds: 14400,
     lessonsCount: 18,
     published: true,
-    instructorName: 'Template School'
+    instructorName: 'Liberty Creativity School'
   },
   {
     id: '3',

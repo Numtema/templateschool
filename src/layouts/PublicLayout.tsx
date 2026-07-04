@@ -28,11 +28,11 @@ export function PublicLayout() {
     <div className="min-h-screen flex flex-col">
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm h-16' : 'bg-transparent h-20'}`}>
         <div className="container-custom h-full flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-brand-primary rounded-xl flex items-center justify-center text-white shadow-primary-glow">
-              <span className="font-bold text-lg md:text-xl">T</span>
+          <Link to="/" className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full overflow-hidden bg-white border border-[#E7E7E7] flex items-center justify-center shrink-0">
+               <img src="/Creativityliberty.png" alt="Liberty Creativity School Logo" className="w-full h-full object-contain p-1" />
             </div>
-            <span className="font-bold text-xl tracking-tight hidden sm:block">Template<span className="text-brand-primary">School</span></span>
+            <span className="font-bold text-xl tracking-tight hidden sm:block">Liberty Creativity School</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -145,11 +145,11 @@ export function PublicLayout() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             <div className="col-span-1 md:col-span-2">
-              <Link to="/" className="flex items-center gap-2 mb-6">
-                <div className="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center text-white">
-                  <span className="font-bold text-lg">T</span>
+              <Link to="/" className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-full overflow-hidden bg-white border border-[#E7E7E7] flex items-center justify-center shrink-0">
+                   <img src="/Creativityliberty.png" alt="Liberty Creativity School Logo" className="w-full h-full object-contain p-1" />
                 </div>
-                <span className="font-bold text-xl">Template<span className="text-brand-primary">School</span></span>
+                <span className="font-bold text-xl">Liberty Creativity School</span>
               </Link>
               <p className="text-[#4B5563] text-sm leading-relaxed max-w-sm mb-6">
                 La plateforme de formation premium pour les créateurs qui veulent acquérir de réelles compétences et transformer leur passion en métier.
@@ -177,7 +177,7 @@ export function PublicLayout() {
           </div>
           
           <div className="pt-8 border-t border-[#F3F4F6] flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-[#9CA3AF] text-xs">© 2024 Template School. Tous droits réservés.</p>
+            <p className="text-[#9CA3AF] text-xs">© 2024 Liberty Creativity School. Tous droits réservés.</p>
             <div className="flex gap-6">
               <Link to="/privacy" className="text-[#9CA3AF] text-xs hover:text-brand-primary">Confidentialité</Link>
               <Link to="/cookies" className="text-[#9CA3AF] text-xs hover:text-brand-primary">Cookies</Link>

@@ -117,7 +117,7 @@ export function HomePage() {
             </div>
 
             <div>
-              <Badge variant="warning" className="mb-6">Pourquoi choisir Template School ?</Badge>
+              <Badge variant="warning" className="mb-6">Pourquoi choisir Liberty Creativity School ?</Badge>
               <h2 className="text-4xl font-bold text-[#111827] mb-8 leading-tight">
                 Une pédagogie pensée pour le résultat, pas pour le visionnage.
               </h2>

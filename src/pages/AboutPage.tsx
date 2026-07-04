@@ -11,12 +11,12 @@ export function AboutPage() {
           <Badge variant="primary" className="mb-6">Notre Mission</Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-8">Démocratiser l'excellence créative</h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Template School est plus qu'une plateforme : c'est un écosystème conçu pour transformer vos ambitions en compétences professionnelles concrètes.
+            Liberty Creativity School est plus qu'une plateforme : c'est un écosystème conçu pour transformer vos ambitions en compétences professionnelles concrètes.
           </p>
         </div>
       </section>
 
-      <div className="container-custom -mt-12">
+      <div className="container-custom mt-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             { title: "Transparence", icon: CheckCircle2, text: "Des programmes clairs, sans faux semblants." },
@@ -43,9 +43,9 @@ export function AboutPage() {
       <section className="py-24 container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-8">L'histoire de Template School</h2>
+            <h2 className="text-3xl font-bold mb-8">L'histoire de Liberty Creativity School</h2>
             <div className="space-y-6 text-[#4B5563] leading-relaxed">
-              <p>Fondée par des créateurs pour des créateurs, Template School est née d'un constat simple : la formation en ligne est souvent trop théorique ou déconnectée de la réalité du terrain.</p>
+              <p>Fondée par des créateurs pour des créateurs, Liberty Creativity School est née d'un constat simple : la formation en ligne est souvent trop théorique ou déconnectée de la réalité du terrain.</p>
               <p>Nous avons décidé de construire le pont manquant entre la passion et le métier, en proposant des formations structurées par des experts qui pratiquent leur art au quotidien.</p>
               <div className="pt-4 flex items-center gap-4">
                 <div className="w-12 h-12 bg-success text-white rounded-full flex items-center justify-center">
