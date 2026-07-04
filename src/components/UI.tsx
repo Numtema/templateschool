@@ -1,11 +1,12 @@
-import { ReactNode } from 'react';
+import React, { ReactNode, ButtonHTMLAttributes } from 'react';
 import { cn } from '../lib/utils.ts';
-import { motion } from 'motion/react';
+import { motion, HTMLMotionProps } from 'motion/react';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends HTMLMotionProps<"button"> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'dark';
   size?: 'sm' | 'md' | 'lg' | 'full';
   children: ReactNode;
+  className?: string;
 }
 
 export function Button({ 

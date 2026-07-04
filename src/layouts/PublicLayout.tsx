@@ -26,7 +26,7 @@ export function PublicLayout() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm h-16' : 'bg-transparent h-20'}`}>
+      <header className={`fixed left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'top-4 bg-white/90 backdrop-blur-md shadow-lg h-16 max-w-[1180px] mx-auto rounded-[32px] border border-[#E7E7E7] w-[calc(100%-2rem)]' : 'top-0 bg-transparent h-20 w-full'}`}>
         <div className="container-custom h-full flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full overflow-hidden bg-white border border-[#E7E7E7] flex items-center justify-center shrink-0">

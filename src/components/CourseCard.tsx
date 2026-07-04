@@ -1,3 +1,4 @@
+import React from 'react';
 import { Course } from '../types';
 import { Badge, Button } from './UI.tsx';
 import { Play, Clock, Layout } from 'lucide-react';
