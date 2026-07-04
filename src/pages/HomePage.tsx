@@ -41,17 +41,34 @@ export function HomePage() {
             </motion.div>
           </div>
 
-          {/* Social Proof */}
+          {/* Categories Marquee */}
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500"
+            className="w-full overflow-hidden flex whitespace-nowrap mt-4"
           >
-            <div className="flex items-center gap-2"><div className="w-8 h-8 bg-gray-300 rounded" /> <span className="font-bold text-gray-500">CREATORS</span></div>
-            <div className="flex items-center gap-2"><div className="w-8 h-8 bg-gray-300 rounded" /> <span className="font-bold text-gray-500">DIGITAL AF</span></div>
-            <div className="flex items-center gap-2"><div className="w-8 h-8 bg-gray-300 rounded" /> <span className="font-bold text-gray-500">WEB HUB</span></div>
-            <div className="flex items-center gap-2"><div className="w-8 h-8 bg-gray-300 rounded" /> <span className="font-bold text-gray-500">YT MASTERY</span></div>
+            <div className="flex animate-marquee min-w-max items-center gap-12 md:gap-24 opacity-60">
+              {/* First set */}
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-brand-primary tracking-widest uppercase">Intelligence Artificielle</span></div>
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-gray-500 tracking-widest uppercase">Marketing Digital</span></div>
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-brand-primary tracking-widest uppercase">Création d'Avatar</span></div>
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-gray-500 tracking-widest uppercase">Développement Web</span></div>
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-brand-primary tracking-widest uppercase">Montage Vidéo</span></div>
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-gray-500 tracking-widest uppercase">Copywriting</span></div>
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-brand-primary tracking-widest uppercase">Design Graphique</span></div>
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-gray-500 tracking-widest uppercase">E-commerce</span></div>
+              
+              {/* Duplicated set for seamless loop */}
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-brand-primary tracking-widest uppercase">Intelligence Artificielle</span></div>
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-gray-500 tracking-widest uppercase">Marketing Digital</span></div>
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-brand-primary tracking-widest uppercase">Création d'Avatar</span></div>
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-gray-500 tracking-widest uppercase">Développement Web</span></div>
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-brand-primary tracking-widest uppercase">Montage Vidéo</span></div>
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-gray-500 tracking-widest uppercase">Copywriting</span></div>
+              <div className="flex items-center gap-3"><span className="font-bold text-xl md:text-2xl text-brand-primary tracking-widest uppercase">Design Graphique</span></div>
+              <div className="flex items-center gap-3 pr-12 md:pr-24"><span className="font-bold text-xl md:text-2xl text-gray-500 tracking-widest uppercase">E-commerce</span></div>
+            </div>
           </motion.div>
         </div>
       </section>
