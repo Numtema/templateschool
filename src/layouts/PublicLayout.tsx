@@ -154,7 +154,7 @@ export function PublicLayout() {
               <p className="text-[#4B5563] text-sm leading-relaxed max-w-sm mb-6">
                 La plateforme de formation premium pour les créateurs qui veulent acquérir de réelles compétences et transformer leur passion en métier.
               </p>
-              <Button variant="dark" size="sm">Nous contacter sur WhatsApp</Button>
+              <Button variant="primary" size="sm" className="!rounded-full">Nous contacter sur WhatsApp</Button>
             </div>
             
             <div>

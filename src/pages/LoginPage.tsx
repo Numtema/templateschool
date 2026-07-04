@@ -20,11 +20,11 @@ export function LoginPage() {
     <div className="min-h-screen bg-white flex flex-col lg:flex-row">
       <div className="lg:w-1/2 p-8 lg:p-24 flex flex-col justify-center">
         <div className="max-w-md w-full mx-auto">
-          <Link to="/" className="inline-flex items-center gap-2 mb-12">
-            <div className="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center text-white shadow-primary-glow">
-              <span className="font-bold text-xl">T</span>
+          <Link to="/" className="inline-flex items-center gap-3 mb-12">
+            <div className="w-12 h-12 rounded-full overflow-hidden bg-white border border-[#E7E7E7] flex items-center justify-center shrink-0">
+               <img src="/Creativityliberty.png" alt="Liberty Creativity School Logo" className="w-full h-full object-contain p-1" />
             </div>
-            <span className="font-bold text-2xl">Template<span className="text-brand-primary">School</span></span>
+            <span className="font-bold text-2xl">Liberty Creativity School</span>
           </Link>
 
           <div className="mb-10">

@@ -9,7 +9,7 @@ interface CourseCardProps {
   course: Course;
 }
 
-export function CourseCard({ course }: CourseCardProps) {
+export const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
   const formatDuration = (seconds: number) => {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
